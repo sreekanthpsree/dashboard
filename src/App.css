@@ -1,5 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+
+
 .App {
   text-align: center;
+}
+
+.css-13cymwt-control{
+  height: 100%;
+  border: 0 !important;
 }
 
 .App-logo {
@@ -11,6 +23,12 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+body{
+  width: 100%;
+  overflow-x: hidden;
+  font-family: "Poppins",sans-serif;
 }
 
 .App-header {
@@ -36,3 +54,4 @@
     transform: rotate(360deg);
   }
 }
+
