@@ -9,7 +9,7 @@ function TemplatesListing() {
         <div className='m-2 p-4 bg-white rounded-md'>
             <div className='md:flex md:justify-between '>
                 <h3 className='text-2xl'>Templates</h3>
-                <Link to={"/template/add"} className='flex mt-2 md:mt-0 md:mb-0 mb-2 gap-2 items-center border-2 font-bold p-2 px-3  border-violet-900 rounded-full hover:text-white hover:bg-violet-700'>
+                <Link to={"/template/add"} className='flex mt-2 md:mt-0 md:mb-0 mb-2 gap-2 items-center border-2 font-bold p-2 px-3  border-violet-900 rounded-full hover:text-white hover:bg-blue-700'>
                     <FontAwesomeIcon icon={faAdd} />
                     Add New
                 </Link>

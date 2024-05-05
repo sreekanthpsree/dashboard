@@ -9,7 +9,7 @@ function DragabbleComponent({ taskId, index, taskName }) {
             {(provided) => (
                 <div  {...provided.draggableProps} ref={provided.innerRef} className='flex bg-white justify-between md:p-2 mt-3 rounded-md items-center sm:p-2  md:w-2/3'>
                     <div className='flex gap-2 sm:items-center sm:text-center items-baseline'>
-                        <p className='p-3 bg-violet-700 rounded-xl px-4 text-white font-bold'>{index + 1}</p>
+                        <p className='p-3 bg-blue-700 rounded-xl px-4 text-white font-bold'>{index + 1}</p>
                         <p className='font-bold'>{taskName}</p>
                     </div>
                     <div>

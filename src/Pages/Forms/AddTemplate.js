@@ -7,6 +7,7 @@ import { Modal, ModalBody, ModalHeader } from 'reactstrap';
 import { useRef, useState } from 'react';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 import DragabbleComponent from '../../Components/DragabbleComponent';
+import { Link } from 'react-router-dom';
 
 
 function AddTemplate() {
@@ -74,11 +75,9 @@ function AddTemplate() {
 
     const reorder = (list, startIndex, endIndex) => {
 
-        console.log(list);
         const result = list;
         const [removed] = result.splice(startIndex, 1);
         result.splice(endIndex, 0, removed);
-        console.log(removed);
         return result;
     };
 
@@ -130,7 +129,6 @@ function AddTemplate() {
                                 closeMenuOnSelect={true}
                                 id="templateTypes" className='rounded-lg w-full h-11 mt-2' options={options}
                                 noOptionsMessage={(e) => {
-                                    console.log(e);
                                     return <div >
                                         <div className='bg-red-200 text-red-500 p-4 rounded-lg'>
                                             We didn't find any mileStone with the name: {e.inputValue}</div>
@@ -152,7 +150,7 @@ function AddTemplate() {
                             <input id="templateName" className='rounded-md w-full h-10 mt-2' />
                         </div>
                         <div className='md:content-end mt-2 sm:w-full md:text-end justify-self-center '>
-                            <button className='bg-violet-600  hover:bg-violet-700 p-2 rounded-md px-4 text-white'>Add Task</button>
+                            <button className='bg-blue-600  hover:bg-blue-700 p-2 rounded-md px-4 text-white'>Add Task</button>
                         </div>
                     </div>
                     <div>
@@ -171,7 +169,7 @@ function AddTemplate() {
                     </div>
                 </div>
                 <div className='mt-4  flex md:justify-end justify-around  '>
-                    <button className='border-1 border-violet-600 rounded-lg p-3  hover:bg-violet-600 hover:text-white'>Save/Add new milestone</button>
+                    <button className='border-1 border-violet-600 rounded-lg p-3  hover:bg-blue-600 hover:text-white'>Save/Add new milestone</button>
                 </div>
                 <div className='mt-3'>
                     {mileStones.map((mileStone) => {
@@ -199,8 +197,8 @@ function AddTemplate() {
                 </div>
 
                 <div className='flex justify-between mt-4'>
-                    <button className='border-1 border-violet-700 px-3 hover:bg-violet-700  hover:text-white rounded-md p-2'>Cancel</button>
-                    <button className='rounded-md bg-violet-600 p-2 text-white px-3'>Submit</button>
+                    <Link to={"/template"} className='border-1 border-violet-700 px-3 hover:bg-blue-700  hover:text-white rounded-md p-2'>Cancel</Link>
+                    <button className='rounded-md bg-blue-600 p-2 text-white px-3'>Submit</button>
                 </div>
 
             </div>
@@ -213,10 +211,10 @@ function AddTemplate() {
                     <input className='w-full rounded-r-md border-gray-400 border-1 rounded-md h-10 focus:border-1 focus:border-gray-400 px-3 mt-2' placeholder='Please Type' />
                 </ModalBody>
                 <div className='flex justify-between p-4'>
-                    <button className='border-1 border-violet-500 px-4 hover:bg-violet-500 hover:text-white p-2 rounded-md' onClick={toggleModal}>
+                    <button className='border-1 border-violet-500 px-4 hover:bg-blue-500 hover:text-white p-2 rounded-md' onClick={toggleModal}>
                         Cancel
                     </button>
-                    <button className='bg-violet-500 text-white rounded-md p-2 px-4' color="secondary" onClick={toggleModal}>
+                    <button className='bg-blue-500 text-white rounded-md p-2 px-4' color="secondary" onClick={toggleModal}>
                         Save
                     </button>
                 </div>
